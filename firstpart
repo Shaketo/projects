@@ -1,0 +1,23 @@
+# Colaboratoryで使用するときは先にこちらを実行してください(１分10秒くらいかかります)
+# 続行のため、途中でEnterを押下してください
+# 必要なパッケージのダウンロード
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+
+# 旧バージョンのchromiumの削除
+!sudo add-apt-repository ppa:saiarcot895/chromium-beta
+!sudo apt remove chromium-browser
+!sudo snap remove chromium
+!sudo apt install chromium-browser
+
+# 最新版seleniumのインストール
+!pip3 install selenium
+!apt-get update
+!apt install chromium-chromedriver
+!cp /usr/lib/chromium-browser/chromedriver /usr/bin
+
+import sys
+sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver')
